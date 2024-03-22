@@ -1,37 +1,39 @@
 * {
-  font-family: "Roboto", sans-serif;
   margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
   scroll-behavior: smooth;
-  font-style: normal;
+}
+
+.navigation {
+  background-color: #4e4e4e;
 }
 
 .navbar-container {
-  background-color: #4e4e4e;
-  width: 100%;
   color: white;
-  margin: 0 auto;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar-container p {
+.navbar-container-paragraph {
   font-size: 18px;
   font-weight: 700;
-  padding-left: 100px;
 }
 
 .navbar-links {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 60px;
   list-style: none;
-  padding-right: 100px;
 }
 
-.navbar-links:last-child {
+.main-nav-link-disabled {
   cursor: not-allowed;
 }
 
@@ -56,20 +58,19 @@
   color: white;
 }
 
-.greeting h1 {
+.greeting-heading {
   font-size: 36px;
   font-weight: 700;
   padding-top: 200px;
-  padding-left: 100px;
   display: flex;
   justify-content: flex-start;
+  max-width: 600px;
 }
 
-.greeting p {
+.greeting-paragraph {
   font-size: 18px;
   font-weight: 700;
   padding-top: 50px;
-  padding-left: 100px;
   margin-bottom: 50px;
 }
 
@@ -80,7 +81,6 @@
   text-decoration: none;
   border: 3px solid white;
   padding: 5px 50px;
-  margin-left: 100px;
   transition: all 1s ease;
 }
 .button:hover {
@@ -99,7 +99,7 @@
   padding-top: 20px;
 }
 
-.about-us h2 {
+.about-us-heading {
   color: #152d41;
   font-size: 36px;
   font-weight: 700;
@@ -144,12 +144,12 @@
   text-align: right;
 }
 
-.spec h4 {
+.spec-heading {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.spec p {
+.spec-paragraph {
   font-size: 18px;
   font-weight: 400;
 }
@@ -158,7 +158,7 @@
   background-color: #405d78;
 }
 
-.offer h2 {
+.offer-heading {
   color: white;
   font-size: 36px;
   font-weight: 700;
@@ -205,18 +205,21 @@
   left: -10px;
 }
 
-.offer-element p {
+.offer-element-paragraph {
   font-size: 24px;
   font-weight: 400;
 }
 
-.offer-element p:nth-of-type(2) {
+.offer-element-paragraph-small {
   font-size: 18px;
   font-weight: 400;
 }
 
 .footer {
   background-color: #4e4e4e;
+}
+
+.foot {
   font-size: 18px;
   font-weight: 700;
   color: white;
@@ -224,16 +227,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 80px;
 }
 
 .social-media {
   display: flex;
   gap: 20px;
-  padding-right: 80px;
 }
 
-.social-media a {
+.social-media-hyperlink {
   text-decoration: none;
   color: white;
   font-size: 30px;
