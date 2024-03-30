@@ -58,10 +58,16 @@ html {
   color: white;
 }
 
+.greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .greeting-heading {
   font-size: 36px;
   font-weight: 700;
-  padding-top: 200px;
   display: flex;
   justify-content: flex-start;
   max-width: 600px;
@@ -82,6 +88,7 @@ html {
   border: 3px solid white;
   padding: 5px 50px;
   transition: all 1s ease;
+  max-width: 50px;
 }
 .button:hover {
   background-color: white;
@@ -113,35 +120,27 @@ html {
   min-width: 200px;
   border-radius: 50%;
   background-color: black;
-}
-
-.image1 {
-  background-image: url(pan.jpg);
   background-position: center;
   background-size: cover;
-  margin-right: 40px;
-}
-
-.image2 {
-  background-image: url(pani.jpg);
-  background-position: center;
-  background-size: cover;
-  margin-left: 40px;
 }
 
 .spec {
   display: flex;
   align-items: center;
+  gap: 40px;
 }
 
-.spec:nth-of-type(odd) {
-  display: flex;
-  flex-direction: row;
-}
 .spec:nth-of-type(even) {
-  display: flex;
   flex-direction: row-reverse;
   text-align: right;
+}
+
+.spec:nth-of-type(odd) .image {
+  background-image: url(man.jpg);
+}
+
+.spec:nth-of-type(even) .image {
+  background-image: url(woman.jpg);
 }
 
 .spec-heading {
@@ -170,7 +169,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 60px;
   padding-bottom: 80px;
