@@ -28,7 +28,7 @@ html {
 }
 
 .navbar-links {
-  display: flex;
+  display: none;
   gap: 60px;
   list-style: none;
 }
@@ -90,13 +90,16 @@ html {
   transition: all 1s ease;
   max-width: 50px;
 }
-.button:hover {
-  background-color: white;
-  color: black;
+
+@media (hover: hover) {
+  .button:hover {
+    color: black;
+    background-color: white;
+  }
 }
 
 .main-container {
-  width: 960px;
+  width: 93%;
   margin: 0 auto;
 }
 
@@ -112,6 +115,7 @@ html {
   font-weight: 700;
   padding-top: 50px;
   padding-bottom: 50px;
+  text-align: center;
 }
 
 .image {
@@ -127,12 +131,8 @@ html {
 .spec {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 40px;
-}
-
-.spec:nth-of-type(even) {
-  flex-direction: row-reverse;
-  text-align: right;
 }
 
 .spec:nth-of-type(odd) .image {
@@ -151,6 +151,7 @@ html {
 .spec-paragraph {
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .offer {
@@ -163,6 +164,7 @@ html {
   font-weight: 700;
   padding-top: 50px;
   margin-bottom: 80px;
+  text-align: center;
 }
 
 .offers-list {
@@ -188,8 +190,10 @@ html {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.offer-element:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .offer-element:hover {
+    transform: scale(1.05);
+  }
 }
 
 .circle {
@@ -221,10 +225,11 @@ html {
   font-size: 18px;
   font-weight: 700;
   color: white;
-  height: 50px;
+  height: 90px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .social-media {
@@ -237,4 +242,53 @@ html {
   color: white;
   font-size: 30px;
   font-weight: 700;
+}
+
+@media screen and (min-width: 769px) {
+  .main-container {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .offer-element {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-container {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .navbar-links {
+    display: flex;
+  }
+  .about-us-heading {
+    padding: 40px 0 60px 0;
+    text-align: left;
+  }
+  .spec {
+    flex-direction: row;
+    padding-bottom: 50px;
+  }
+  .spec:nth-of-type(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  .spec-heading:nth-of-type(even) {
+    text-align: right;
+  }
+
+  .offer-heading {
+    text-align: left;
+    font-size: 36px;
+  }
+  .offers-list {
+    flex-direction: row;
+  }
+  .foot {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+  }
 }
